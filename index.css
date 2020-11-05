@@ -1,0 +1,285 @@
+.card {
+  border: 1px solid #efefef;
+}
+
+.card__text {
+  color: #222;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.sect {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+}
+
+.sect .sidemen {
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 4;
+  position: absolute;
+  min-width: 100vw;
+  height: 100%;
+  -webkit-transition: all 0.4s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  transition: all 0.4s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.sect .sidemen i {
+  font-size: 46px;
+  position: absolute;
+  top: 20px;
+  left: 90%;
+  cursor: pointer;
+}
+
+.sect .sidemen ul {
+  max-width: 250px;
+  background: #ff6b81;
+  height: 100%;
+}
+
+.sect .sidemen ul li {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.sect .sidemen ul li:hover {
+  background: #ff6348;
+}
+
+.sect .sidemen ul li a {
+  width: 100%;
+  display: block;
+  height: 100%;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+}
+
+.sect .sidemen ul li a:hover, .sect .sidemen ul li a:active, .sect .sidemen ul li a:visited {
+  color: #f1f1f1;
+}
+
+.sect .logo {
+  position: absolute;
+  z-index: 2;
+  top: 20px;
+  left: 90%;
+  font-size: 30px;
+  color: black;
+  font-family: cursive;
+}
+
+.sect .search {
+  position: absolute;
+  z-index: 2;
+  font-size: 24px;
+  left: 50%;
+  top: 20px;
+  border: 1px solid #f1f1f1;
+  padding: 5px 10px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.sect .search input {
+  background: none;
+  outline: none;
+  border: none;
+  color: #fff;
+  font-size: 21px;
+  min-width: 250px;
+}
+
+.sect .search input::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.sect .search input:-ms-input-placeholder {
+  color: #fff;
+}
+
+.sect .search input::-ms-input-placeholder {
+  color: #fff;
+}
+
+.sect .search input::placeholder {
+  color: #fff;
+}
+
+.sect p {
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.sect button {
+  color: #f1f1f1;
+  background: #f39c12;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  margin-top: 20px;
+  float: right;
+}
+
+.sect h1 {
+  font-size: 96px;
+  text-transform: uppercase;
+  font-weight: 700;
+  -webkit-text-stroke-width: 0.01px;
+  letter-spacing: 1.2;
+}
+
+.sect .men {
+  font-size: 42px;
+  color: #fff;
+  position: absolute;
+  cursor: pointer;
+  left: 20px;
+  top: 15px;
+  z-index: 2;
+}
+
+.sect .ghu {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transition-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+          transition-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+}
+
+.sect .btd {
+  position: absolute;
+  top: 40%;
+  left: 98%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.sect .btd i {
+  margin-bottom: 5px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.sect .btd i:hover {
+  color: #ED4C67;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.sect .btd .fas {
+  color: #fbc531 !important;
+}
+
+.sect .page1 {
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(100, 100, 100, 0.35)), to(rgba(100, 100, 100, 0.35))), url("https://images.unsplash.com/photo-1533227268428-f9ed0900fb3b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80");
+  background: linear-gradient(rgba(100, 100, 100, 0.35), rgba(100, 100, 100, 0.35)), url("https://images.unsplash.com/photo-1533227268428-f9ed0900fb3b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sect .page2 {
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(100, 100, 100, 0.2)), to(rgba(100, 100, 100, 0.2))), url("https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80");
+  background: linear-gradient(rgba(100, 100, 100, 0.2), rgba(100, 100, 100, 0.2)), url("https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sect .page2 button {
+  background: #fd79a8;
+}
+
+.sect .page2 h1 {
+  font-size: 96px;
+  text-transform: uppercase;
+  font-weight: 700;
+  -webkit-text-stroke-width: 0.01px;
+  letter-spacing: 1.2;
+  background-color: white;
+  color: black !important;
+  mix-blend-mode: screen;
+  padding: 10px 15px;
+}
+
+.sect .page3 {
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(100, 100, 100, 0.2)), to(rgba(100, 100, 100, 0.2))), url("https://images.unsplash.com/photo-1578897366921-24a8d98b2f86?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80");
+  background: linear-gradient(rgba(100, 100, 100, 0.2), rgba(100, 100, 100, 0.2)), url("https://images.unsplash.com/photo-1578897366921-24a8d98b2f86?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sect .page3 button {
+  background: #00b894;
+}
+
+.sect .page4 {
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(100, 100, 100, 0.4)), to(rgba(100, 100, 100, 0.4))), url("https://images.unsplash.com/photo-1537832816519-689ad163238b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80");
+  background: linear-gradient(rgba(100, 100, 100, 0.4), rgba(100, 100, 100, 0.4)), url("https://images.unsplash.com/photo-1537832816519-689ad163238b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sect .page4 button {
+  background: #EE5A24;
+}
+/*# sourceMappingURL=index.css.map */

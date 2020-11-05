@@ -1,0 +1,245 @@
+@mixin  center {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin backg {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@mixin heading {
+    font-size: 96px;
+    text-transform: uppercase;
+    font-weight: 700;
+    -webkit-text-stroke-width: 0.01px;
+    letter-spacing: 1.2;
+}
+@mixin  button {
+    
+    color: #f1f1f1;
+    background: #f39c12;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    margin-top: 20px;
+    float:right
+}
+.card
+{
+    border: 1px solid #efefef;
+    &__text
+    {
+        color: #222;
+    }
+}
+*
+{
+    margin:0;
+    padding:0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.sect
+{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+    .sidemen
+    {
+        background: rgba(0,0,0,0.6);
+        z-index: 4;
+        position: absolute;
+        min-width: 100vw;
+        height: 100%;
+        transition: all 0.4s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+        transform: translateX(-100%);
+        i{
+            font-size: 46px;
+            position: absolute; 
+            top:20px;
+            left: 90%;
+            cursor: pointer;
+        }
+        ul
+        {
+            max-width: 250px;
+            background: #ff6b81;
+
+            height:100%;
+            li
+            {
+                padding-top: 10px;
+                padding-bottom: 10px;
+                text-align: center;
+                &:hover
+                {
+                    background:#ff6348;
+                }
+                a
+                {
+                    width: 100%;
+                    display: block;
+                    height: 100%;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    color: #fff;
+                    &:hover, &:active, &:visited
+                    {
+                        color: #f1f1f1;
+                    }
+                }
+            }
+        }
+    }
+    .logo
+    {
+        position: absolute;
+        z-index: 2;
+        top:20px;
+        left: 90%;
+        font-size: 30px;
+        color: black;
+        font-family: cursive;
+    }
+    .search
+    {
+        position: absolute;
+        z-index: 2;
+        font-size: 24px;
+        left:50%;
+        top: 20px;
+        // border:1px solid #fff;
+        border: 1px solid #f1f1f1;
+        padding: 5px 10px;
+        transform: translateX(-50%);
+        input
+        {
+            background: none;
+            outline: none;
+            border: none;
+            color: #fff;
+            font-size: 21px;
+            min-width: 250px;
+        }
+        input::placeholder
+        {
+            color: #fff;
+        }
+    }
+    p
+    {
+        color: #fff;
+        font-size: 20px;
+        text-align: center;
+        display: inline-block;
+        margin-top: 20px;
+    }
+    button
+    {
+        @include button();
+    }
+    h1
+    {
+        @include heading();
+    }
+    .men
+    {
+        font-size: 42px;
+        color: #fff;
+        position: absolute;
+        cursor: pointer;
+        left:20px;
+        top:15px;
+        z-index: 2;
+    }
+    .ghu
+    {
+        transition: all 0.5s;
+        // transition-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+        // transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        // transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+        // transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+        // transition-timing-function: cubic-bezier(1, 0, 0, 1);
+        // transition-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
+        transition-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+        
+    }
+    .btd
+    {
+        position: absolute;
+        top:40%;
+        left: 98%;
+        display: flex;
+        flex-direction: column;
+        i
+        {
+            margin-bottom: 5px;
+            transition: all 0.2s ease;
+            font-size: 15px;
+            cursor: pointer;
+            
+            &:hover
+            {
+                color: #ED4C67;
+                transform: scale(1.2);;
+            }
+        }
+        .fas
+        {
+                color: #fbc531 !important;
+        }
+    }
+    .page1
+    {
+        height: 100%;
+        background: linear-gradient(rgba(100,100,100,0.35),rgba(100,100,100,0.35)),url("https://images.unsplash.com/photo-1533227268428-f9ed0900fb3b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80");
+        height: 100vh;
+        @include backg();
+        @include center();
+    }
+    .page2
+    {
+        height: 100vh;
+        background: linear-gradient(rgba(100,100,100,0.2),rgba(100,100,100,0.2)),url("https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80");
+        @include backg();
+        @include center();
+        button
+        {
+               background: #fd79a8;
+        }
+        h1
+        {
+            @include heading();
+
+        background-color: white;
+        color: black !important;
+        mix-blend-mode: screen;
+        padding: 10px 15px;
+        }
+    }
+    .page3
+    {
+        height: 100vh;
+        background: linear-gradient(rgba(100,100,100,0.2),rgba(100,100,100,0.2)),url("https://images.unsplash.com/photo-1578897366921-24a8d98b2f86?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80");
+        @include backg();
+        @include center();
+        button
+        {
+            background: #00b894;
+        }
+    }
+    .page4
+    {
+        height: 100vh;
+        background:linear-gradient(rgba(100,100,100,0.4),rgba(100,100,100,0.4)),url("https://images.unsplash.com/photo-1537832816519-689ad163238b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80");
+        @include backg();
+        @include center();
+        button
+        {
+            background: #EE5A24;
+        }
+
+    }
+}

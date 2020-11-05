@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="sect">
+        <div class="men">
+            <i class="fas fa-bars" onclick="togMen(false)"></i>
+        </div>
+        <div class="sidemen" id='sdm' onclick="togMen(true)">
+            <ul onclick="togMen(false)">
+                <li><a href="#men">Mens</a></li>
+                <li><a href="#women">Womens</a></li>
+                <li><a href="#kids">Kids </a></li>
+                <li><a href="#apparels">Apparels</a></li>
+                <li><a href="#fashion">Fashion</a></li>
+                <li> <a href="#kids">Kids </a></li>
+            </ul>
+            <i class="fas fa-times"></i>
+        </div>
+        <div class='search'>
+        <input type='text' placeholder="Search brands or product">
+        <i class="fas fa-search"></i>
+        </div>
+        <div class="logo">
+            LO<span style="color:#ff6b6b">GO</span>
+        </div>
+        <div class="ghu" id='ghy'>
+            <div class='page1'>
+                <div class="vtal">
+                    <h1>Mens Fashion</h1>
+                    <p>Exclusive range of Men's wear. Tailored for best fit.</p>
+                    <button>Explore now</button>    
+                </div>
+            </div>
+            <div class='page2'>
+                <div class="vtal">
+
+                <h1>For Womens</h1>
+                <p>From the street of Old Delhi all the way to Gujrat</p>
+                <button>Checkout</button>
+                </div>
+            </div>
+            <div class='page3'>
+                <div class="vtal">
+                <h1>Kids wears</h1>
+                <p>Customizable with JS</p>
+                <button>Buy Now</button>
+
+            </div>
+            </div>
+            <div class="page4">
+                <div class="vtal">
+                <h1> accessories</h1>
+                <p>Find Branded Shoes, Bags, hats and much more</p>
+                <button>Checkout Range</button>
+                </div>
+            </div>
+        </div>
+        <div class="btd" id='csa'>
+            <i class="fas fa-circle" onclick='trn(this)' data-val=0 ></i>
+            <i class="far fa-circle" onclick='trn(this)' data-val=1></i>
+            <i class="far fa-circle" onclick='trn(this)' data-val=2></i>
+            <i class="far fa-circle" onclick='trn(this)' data-val=3></i>
+            
+        </div>
+    </div>
+    
+    
+</body>
+</html>
+<script>
+    // let x=0;
+    // document.addEventListener('scroll',()=>{
+    //     // document.getElementById('ghy').style.transform='translateY(-100vh)';
+    //     trn();
+    // })
+    const togMen = (e) => {
+        // alert("heelllooo")
+        const elem = document.getElementById('sdm');
+        elem.style.transform=e?'translateX(-100%)':'translateX(0%)';
+    }
+    const trn = (e)=>{
+        // console.log(e.parentNode.childNodes);
+        Array.from(document.getElementById('csa').children).map(ef=>{
+            if(ef==e)
+            {
+                e.setAttribute('class','fas fa-circle');
+            }   
+            else
+            {
+                ef.setAttribute('class','far fa-circle')
+            }
+        })
+        // console.log(arr); 
+        
+        document.getElementById('ghy').style='transform:translateY(-'+(100*e.getAttribute('data-val'))+'vh)';
+
+    }
+</script>
