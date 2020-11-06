@@ -80,6 +80,47 @@
     //     // document.getElementById('ghy').style.transform='translateY(-100vh)';
     //     trn();
     // })
+    let ind = 0,ctime,ltime=0;
+    window.addEventListener('wheel',(e)=>{
+        ctime = new Date().getTime();
+        // console.log("hwww",e);
+        
+        if(ctime-ltime>500){
+            if(e.deltaY<0)
+            {
+                // alert("up");
+                if(ind !== 0 )
+                {
+                    ind-=1;
+                    console.log(ind)
+                    document.getElementById('ghy').style='transform:translateY(-'+ ind*100 +'vh)';
+                }
+            }
+            else if (e.deltaY>0)
+            {
+                // alert("down");
+                if(ind !==3)
+                {
+                    ind+=1;
+                    console.log(ind)
+                    document.getElementById('ghy').style='transform:translateY(-'+ ind*100 +'vh)';
+                    
+                }
+            }
+            Array.from(document.getElementById('csa').children).map(ef=>{
+                if(ef.getAttribute('data-val')==ind)
+                {
+                    ef.setAttribute('class','fas fa-circle');
+                }   
+                else
+                {
+                    ef.setAttribute('class','far fa-circle')
+                }
+            })
+            ltime = new Date().getTime();
+        }
+        
+    })
     const togMen = (e) => {
         // alert("heelllooo")
         const elem = document.getElementById('sdm');
@@ -98,8 +139,7 @@
             }
         })
         // console.log(arr); 
-        
+        ind = e.getAttribute('data-val');
         document.getElementById('ghy').style='transform:translateY(-'+(100*e.getAttribute('data-val'))+'vh)';
-
     }
 </script>
